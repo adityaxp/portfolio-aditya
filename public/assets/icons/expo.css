@@ -1,0 +1,12 @@
+.svg-container {
+  display: inline-block;
+}
+
+.hover-svg .svg-path {
+  fill: #fff; /* Default color */
+  transition: fill 0.3s; /* Smooth transition */
+}
+
+.hover-svg:hover .svg-path {
+  fill: #00e187; /* Change to your desired color on hover */
+}
