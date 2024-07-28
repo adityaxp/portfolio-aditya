@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['cubanvr.com', 'github.com'],
-  },
+    domains: ['github.com', 'firebasestorage.googleapis.com']
+  }
 }
 
 export default nextConfig
