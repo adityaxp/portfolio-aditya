@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, {useState} from 'react'
 
 import {
   FaHtml5,
@@ -12,7 +12,7 @@ import {
   FaPython,
   FaJava,
   FaPhp,
-  FaGit,
+  FaGit
 } from 'react-icons/fa'
 
 import {
@@ -26,18 +26,18 @@ import {
   SiMongodb,
   SiSupabase,
   SiArduino,
-  SiAdobephotoshop,
+  SiAdobephotoshop
 } from 'react-icons/si'
 
-import { DiRasberryPi } from 'react-icons/di'
+import {DiRasberryPi} from 'react-icons/di'
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs'
 
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
-  TooltipTrigger,
+  TooltipTrigger
 } from '@/components/ui/tooltip'
 
 import {
@@ -46,11 +46,11 @@ import {
   SelectGroup,
   SelectItem,
   SelectTrigger,
-  SelectValue,
+  SelectValue
 } from '@/components/ui/select'
 
-import { ScrollArea } from '@/components/ui/scroll-area'
-import { motion } from 'framer-motion'
+import {ScrollArea} from '@/components/ui/scroll-area'
+import {motion} from 'framer-motion'
 
 import ExpoSvg from '../../public/assets/icons/exposvg'
 
@@ -61,48 +61,48 @@ const aboutData = {
   info: [
     {
       fieldName: 'Name',
-      fieldValue: 'Aditya Balsane',
+      fieldValue: 'Aditya Balsane'
     },
     {
       fieldName: 'Experience',
-      fieldValue: '1+ Years',
+      fieldValue: '1+ Years'
     },
     {
       fieldName: 'Phone',
-      fieldValue: '(+91) 94032 99428',
+      fieldValue: '(+91) 94032 99428'
     },
     {
       fieldName: 'Email',
-      fieldValue: 'adityabalsane.devmail@gmail.com',
-    },
-  ],
+      fieldValue: 'adityabalsane.devmail@gmail.com'
+    }
+  ]
 }
 
 const experienceData = {
   icon: '../../public/assets/icons/badge.svg',
   title: 'My experience',
   description:
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam earum, nam a, architecto consectetur dicta autem, doloremque atque porro natus quia sunt aliquam ratione aliquid minima itaque obcaecati consequuntur soluta!',
+    'I have contributed to the development of end-to-end applications with multiple teams, working across various technologies. Additionally, I have contributed as a research assistant on a research project at my institute.',
   items: [
     {
       company: 'Stealth Startup',
       position: 'React Native Developer (Freelance Work)',
       duration: 'Nov 2023 - Apr 2024',
-      location: 'Missouri, United States · Remote',
+      location: 'Missouri, United States · Remote'
     },
     {
       company: 'SecqurAIse Technologies',
       position: 'Android Development Intern',
       duration: 'Mar 2023 - Jul 2023',
-      location: 'Chennai, Tamil Nadu, India · Remote',
+      location: 'Chennai, Tamil Nadu, India · Remote'
     },
     {
       company: 'K.K.Wagh institute of Engineering Education & Research',
       position: 'Research Intern (Image Processing)',
       duration: 'Feb 2023 - Mar 2023',
-      location: ' Nasik, Maharashtra, India',
-    },
-  ],
+      location: ' Nasik, Maharashtra, India'
+    }
+  ]
 }
 
 const educationData = {
@@ -115,129 +115,129 @@ const educationData = {
       institution: 'Savitribai Phule Pune University',
       degree: 'Bachelor of Engineering: Computer Engineering',
       grade: 'CGPA : 8.76/10',
-      duration: '2021 - 2024',
+      duration: '2021 - 2024'
     },
     {
       institution: 'Maharashtra State Board of Technical Education',
       degree: 'Diploma in Computer Engineering',
       grade: 'Percentage: 95/100',
-      duration: '2018 - 2021',
-    },
-  ],
+      duration: '2018 - 2021'
+    }
+  ]
 }
 
 const skillsData: any = {
-  title: 'My experience',
+  title: 'My skills',
   description:
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam earum, nam a, architecto consectetur dicta autem, doloremque atque porro natus quia sunt aliquam ratione aliquid minima itaque obcaecati consequuntur soluta!',
+    "I'm proficient in mobile development and also work on web development on the side. Additionally, I enjoy tinkering with embedded systems and IoT devices.",
   skillList: {
     languages: [
       {
         icon: <FaJava />,
-        name: 'Java',
+        name: 'Java'
       },
       {
         icon: <SiKotlin />,
-        name: 'Kotlin',
+        name: 'Kotlin'
       },
       {
         icon: <FaJs />,
-        name: 'JavaScript',
+        name: 'JavaScript'
       },
       {
         icon: <SiTypescript />,
-        name: 'TypeScript',
+        name: 'TypeScript'
       },
       {
         icon: <FaPython />,
-        name: 'Python',
+        name: 'Python'
       },
       {
         icon: <FaPhp />,
-        name: 'PHP',
-      },
+        name: 'PHP'
+      }
     ],
     appDev: [
       {
         icon: <FaAndroid />,
-        name: 'Android',
+        name: 'Android'
       },
       {
         icon: <FaReact />,
-        name: 'React-Native',
+        name: 'React-Native'
       },
       {
         icon: <ExpoSvg />,
-        name: 'Expo',
-      },
+        name: 'Expo'
+      }
     ],
     webDev: [
       {
         icon: <FaHtml5 />,
-        name: 'HTML5',
+        name: 'HTML5'
       },
       {
         icon: <FaCss3 />,
-        name: 'CSS3',
+        name: 'CSS3'
       },
       {
         icon: <SiTailwindcss />,
-        name: 'Tailwind',
+        name: 'Tailwind'
       },
       {
         icon: <FaReact />,
-        name: 'React',
+        name: 'React'
       },
       {
         icon: <SiNextdotjs />,
-        name: 'NextJS',
-      },
+        name: 'NextJS'
+      }
     ],
     database: [
       {
         icon: <SiMysql />,
-        name: 'MySQL',
+        name: 'MySQL'
       },
       {
         icon: <SiMongodb />,
-        name: 'MongoDB',
+        name: 'MongoDB'
       },
       {
         icon: <SiFirebase />,
-        name: 'Firebase',
+        name: 'Firebase'
       },
       {
         icon: <SiSupabase />,
-        name: 'Supabase',
-      },
+        name: 'Supabase'
+      }
     ],
     misc: [
       {
         icon: <FaGit />,
-        name: 'Git',
+        name: 'Git'
       },
       {
         icon: <SiOpencv />,
-        name: 'OpenCV',
+        name: 'OpenCV'
       },
       {
         icon: <FaFigma />,
-        name: 'Figma',
+        name: 'Figma'
       },
       {
         icon: <SiAdobephotoshop />,
-        name: 'Adobe Photoshop',
+        name: 'Adobe Photoshop'
       },
       {
         icon: <DiRasberryPi />,
-        name: 'RasberryPi',
+        name: 'RasberryPi'
       },
       {
         icon: <SiArduino />,
-        name: 'Arduino',
-      },
-    ],
-  },
+        name: 'Arduino'
+      }
+    ]
+  }
 }
 const AboutMe = () => {
   const handleSelect = (value: string) => {
@@ -248,10 +248,10 @@ const AboutMe = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0 }}
+      initial={{opacity: 0}}
       animate={{
         opacity: 1,
-        transition: { delay: 0.5, duration: 0.4, ease: 'easeIn' },
+        transition: {delay: 0.5, duration: 0.4, ease: 'easeIn'}
       }}
       className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
     >
@@ -261,17 +261,18 @@ const AboutMe = () => {
           className="flex flex-col xl:flex-row gap-[60px]"
         >
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
+            <TabsTrigger value="skills">Skills</TabsTrigger>
             <TabsTrigger value="experience">Experience</TabsTrigger>
             <TabsTrigger value="education">Education</TabsTrigger>
-            <TabsTrigger value="skills">Skills</TabsTrigger>
-            <TabsTrigger value="about">About me</TabsTrigger>
           </TabsList>
 
           {/* content */}
           <div className="min-h-[70vh] w-full">
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{experienceData.title}</h3>
+                <h3 className="text-4xl font-bold  hover:text-accent">
+                  {experienceData.title}
+                </h3>
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                   {experienceData.description}
                 </p>
@@ -288,13 +289,13 @@ const AboutMe = () => {
                             {item.position}
                           </h3>
                           <div className="flex items-center gap-3 my-2">
-                            <span className="w-[6px] h-[6px] rounded-full bg-accent" />
+                            {/* <span className="w-[6px] h-[6px] rounded-full bg-accent" /> */}
                             <p className="text-sm text-white/60 lg:text-left px-1">
                               {item.company}
                             </p>
                           </div>
                           <div className="flex items-center gap-3">
-                            <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+                            {/* <span className="w-[6px] h-[6px] rounded-full bg-accent"></span> */}
                             <p className="text-sm text-white/60 lg:text-left  px-1">
                               {item.location}
                             </p>
@@ -308,10 +309,12 @@ const AboutMe = () => {
             </TabsContent>
             <TabsContent value="education" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{educationData.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                <h3 className="text-4xl font-bold hover:text-accent">
+                  {educationData.title}
+                </h3>
+                {/* <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                   {educationData.description}
-                </p>
+                </p> */}
                 <ScrollArea className="h-[480px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {educationData.items.map((item, index) => {
@@ -325,13 +328,13 @@ const AboutMe = () => {
                             {item.degree}
                           </h3>
                           <div className="flex items-center gap-3 my-2">
-                            <span className="w-[6px] h-[6px] rounded-full bg-accent" />
+                            {/* <span className="w-[6px] h-[6px] rounded-full bg-accent" /> */}
                             <p className="text-sm text-white/60 lg:text-left px-1">
                               {item.institution}
                             </p>
                           </div>
                           <div className="flex items-center gap-3">
-                            <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+                            {/* <span className="w-[6px] h-[6px] rounded-full bg-accent" /> */}
                             <p className="text-sm text-white/60 lg:text-left  px-1">
                               {item.grade}
                             </p>
@@ -346,7 +349,9 @@ const AboutMe = () => {
             <TabsContent value="skills" className="w-full">
               <div className="flex flex-col gap-[30px]">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                  <h3 className="text-4xl font-bold">{skillsData.title}</h3>
+                  <h3 className="text-4xl font-bold hover:text-accent">
+                    {skillsData.title}
+                  </h3>
                   <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                     {skillsData.description}
                   </p>
