@@ -3,8 +3,10 @@ import React from 'react'
 
 import {motion} from 'framer-motion'
 import Image from 'next/image'
+import {useTheme} from 'next-themes'
 
 const Profile = () => {
+  const {resolvedTheme} = useTheme()
   return (
     <div className="w-full h-full relative">
       <motion.div
@@ -44,11 +46,11 @@ const Profile = () => {
             cx="253"
             cy="253"
             r="250"
-            stroke="#00ff99"
-            strokeWidth="4"
+            stroke={resolvedTheme === 'light' ? '#000' : '#ededed'}
+            strokeWidth="6"
             strokeLinecap="round"
             strokeLinejoin="round"
-            initial={{strokeDasharray: '300 5 0 0'}}
+            initial={{strokeDasharray: '500 10 0 0'}}
             animate={{
               rotate: [120, 360]
             }}

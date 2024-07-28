@@ -31,9 +31,10 @@ const config = {
     extend: {
       colors: {
         primary: '#1c1c22',
+        offwhite: '#ededed',
         accent: {
-          DEFAULT: '#08ff99',
-          hover: '#00e187'
+          DEFAULT: '#fff',
+          hover: '#ededed'
         },
 
         border: 'hsl(var(--border))',

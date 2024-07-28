@@ -2,6 +2,7 @@ import type {Metadata} from 'next'
 import {JetBrains_Mono} from 'next/font/google'
 import './globals.css'
 import {Header} from '@/components/Header'
+import {AppThemeProvider} from './theme-provider'
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
@@ -20,10 +21,12 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={jetbrainsMono.variable}>
-        <Header />
-        {children}
+        <AppThemeProvider>
+          <Header />
+          {children}
+        </AppThemeProvider>
       </body>
     </html>
   )
