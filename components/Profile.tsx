@@ -1,25 +1,25 @@
 'use client'
 import React from 'react'
 
-import { motion } from 'framer-motion'
+import {motion} from 'framer-motion'
 import Image from 'next/image'
 
 const Profile = () => {
   return (
     <div className="w-full h-full relative">
       <motion.div
-        initial={{ opacity: 0 }}
+        initial={{opacity: 0}}
         animate={{
           opacity: 1,
-          transition: { delay: 1, duration: 0.4, ease: 'easeIn' },
+          transition: {delay: 1, duration: 0.4, ease: 'easeIn'}
         }}
       >
         {/* image */}
         <motion.div
-          initial={{ opacity: 0 }}
+          initial={{opacity: 0}}
           animate={{
             opacity: 1,
-            transition: { delay: 1.4, duration: 0.4, ease: 'easeInOut' },
+            transition: {delay: 1.4, duration: 0.4, ease: 'easeInOut'}
           }}
           className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute"
         >
@@ -48,15 +48,14 @@ const Profile = () => {
             strokeWidth="4"
             strokeLinecap="round"
             strokeLinejoin="round"
-            initial={{ strokeDasharray: '24 10 0 0' }}
+            initial={{strokeDasharray: '300 5 0 0'}}
             animate={{
-              strokeDasharray: ['15 120 25 25', '16 25 92 72', '4 250 22 22'],
-              rotate: [120, 360],
+              rotate: [120, 360]
             }}
             transition={{
               duration: 20,
               repeat: Infinity,
-              repeatType: 'reverse',
+              repeatType: 'reverse'
             }}
           />
         </motion.svg>

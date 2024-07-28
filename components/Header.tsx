@@ -1,8 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
-import { NavBar } from './NavBar'
-import { Button } from './ui/button'
-import { MobileNavBar } from './MobileNavBar'
+import {NavBar} from './NavBar'
+import {Button} from './ui/button'
+import {MobileNavBar} from './MobileNavBar'
 
 export const Header = () => {
   return (
@@ -17,7 +17,7 @@ export const Header = () => {
         {/* desktop nav */}
         <div className="hidden xl:flex items-center gap-8">
           <NavBar />
-          <Link href="/">
+          <Link href="/contact">
             <Button>Hire me</Button>
           </Link>
         </div>
