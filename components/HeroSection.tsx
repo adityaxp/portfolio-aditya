@@ -14,9 +14,10 @@ const HeroSection = () => {
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           {/* text */}
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <button className="mb-5 px-4 py-2 backdrop-blur-sm border bg-emerald-300/10 border-emerald-500/20 text-white mx-auto text-center rounded-full relative mt-4">
-              <span className="text-l">Software Developer</span>
-              <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-emerald-500 to-transparent" />
+            <button className="mb-5 px-4 py-2  backdrop-blur-sm border hover:bg-accent-hover  border-black dark:border-white mx-auto text-center rounded-full relative mt-4">
+              <span className="text-l dark:hover:text-black text-black dark:text-white ">
+                Software Developer
+              </span>
             </button>
             <motion.h1
               initial={{
@@ -31,10 +32,12 @@ const HeroSection = () => {
                 duration: 0.5,
                 ease: [0.4, 0.0, 0.2, 1]
               }}
-              className="h2 mb-6"
+              className="h2 mb-6 text-white text-stroke-3 dark:text-white/80"
             >
               Hello I{"'"}m <br />
-              <span className="text-accent h1">Aditya Balsane</span>
+              <span className="h1 text-black dark:text-white hover:text-accent-hover">
+                Aditya Balsane
+              </span>
             </motion.h1>
             <motion.h1
               initial={{
@@ -49,10 +52,10 @@ const HeroSection = () => {
                 duration: 0.5,
                 ease: [0.4, 0.0, 0.2, 1]
               }}
-              className="max-w-[500px] mb-9 text-white/80"
+              className="max-w-[510px] mb-9 dark:text-white/80"
             >
               With a passion for development,
-              <Highlight className="text-black dark:text-white">
+              <Highlight className="text-white dark:text-black">
                 I excel at crafting elegant digital experiences and am
                 proficient in a wide range of technologies and programming
                 languages.
@@ -63,14 +66,14 @@ const HeroSection = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="uppercase flex items-center gap-2 text-accent hover:text-primary"
+                className="uppercase flex items-center gap-2 text-white hover:bg-transparent hover:text-primary"
               >
                 <span>Download CV</span>
                 <FiDownload className="text-xl" />
               </Button>
               <SocialsItem
                 containerStyles="flex gap-6"
-                iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover: transition-all duration-500"
+                iconStyles="w-9 h-9 border border-black hover:bg-accent-hover dark:border-accent rounded-full flex justify-center items-center dark:text-accent text-base dark:hover:bg-accent dark:hover:text-primary hover:transition-all duration-500"
               />
             </div>
           </div>

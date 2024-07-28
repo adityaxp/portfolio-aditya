@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply font-primary bg-primary text-white leading-loose;
+    @apply font-primary text-black leading-loose;
   }
   .h1 {
     @apply text-[48px] xl:text-[70px] leading-[1.1] font-semibold;
@@ -15,4 +15,18 @@
   .h3 {
     @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
   }
+}
+.text-stroke-1 {
+  text-shadow: -0.2px -0.5px 0 black, 0.2px -0.2px 0 black, -0.2px 0.5px 0 black,
+    0.2px 0.2px 0 black;
+}
+
+.text-stroke-2 {
+  text-shadow: -0.2px -0.5px 0 white, 0.2px -0.2px 0 white, -0.2px 0.5px 0 white,
+    0.2px 0.2px 0 white;
+}
+
+.text-stroke-3 {
+  text-shadow: -0.5px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
 }

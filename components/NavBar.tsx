@@ -1,25 +1,25 @@
 'use client'
 
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import {usePathname} from 'next/navigation'
 
 const links = [
   {
     name: 'home',
-    path: '/',
+    path: '/'
   },
   {
     name: 'about Me',
-    path: '/aboutMe',
+    path: '/aboutMe'
   },
   {
     name: 'projects',
-    path: '/projects',
+    path: '/projects'
   },
   {
     name: 'contact',
-    path: '/contact',
-  },
+    path: '/contact'
+  }
 ]
 
 export const NavBar = () => {
@@ -32,8 +32,9 @@ export const NavBar = () => {
             href={link.path}
             key={index}
             className={`${
-              link.path === pathname && 'text-accent border-b-2 border-accent'
-            } capitalize font-medium hover:text-accent transition-all`}
+              link.path === pathname &&
+              'text-black dark:text-white border-b-2 border-black dark:border-white'
+            } capitalize font-medium text-black dark:text-white hover:text-black transition-all`}
           >
             {link.name}
           </Link>

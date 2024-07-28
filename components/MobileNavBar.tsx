@@ -5,29 +5,29 @@ import {
   Sheet,
   SheetClose,
   SheetContent,
-  SheetTrigger,
+  SheetTrigger
 } from '@/components/ui/sheet'
-import { usePathname } from 'next/navigation'
+import {usePathname} from 'next/navigation'
 import Link from 'next/link'
-import { CiMenuFries } from 'react-icons/ci'
+import {CiMenuFries} from 'react-icons/ci'
 
 const links = [
   {
     name: 'home',
-    path: '/',
+    path: '/'
   },
   {
     name: 'about Me',
-    path: '/aboutMe',
+    path: '/aboutMe'
   },
   {
     name: 'projects',
-    path: '/projects',
+    path: '/projects'
   },
   {
     name: 'contact',
-    path: '/contact',
-  },
+    path: '/contact'
+  }
 ]
 
 export const MobileNavBar = () => {
@@ -35,7 +35,7 @@ export const MobileNavBar = () => {
   return (
     <Sheet>
       <SheetTrigger className="flex justify-center items-center">
-        <CiMenuFries className="text-[32px] text-accent" />
+        <CiMenuFries className="text-[32px] text-black dark:text-accent" />
       </SheetTrigger>
       <SheetContent className="flex flex-col">
         {/* logo */}
