@@ -10,6 +10,9 @@ import {
 import {usePathname} from 'next/navigation'
 import Link from 'next/link'
 import {CiMenuFries} from 'react-icons/ci'
+import ThemeSwitch from './ui/theme-switch'
+import Image from 'next/image'
+import logo from '@/public/assets/images/logo.png'
 
 const links = [
   {
@@ -37,13 +40,11 @@ export const MobileNavBar = () => {
       <SheetTrigger className="flex justify-center items-center">
         <CiMenuFries className="text-[32px] text-black dark:text-accent" />
       </SheetTrigger>
-      <SheetContent className="flex flex-col">
+      <SheetContent className="flex flex-col bg-white dark:bg-primary">
         {/* logo */}
-        <div className="mt-32 mb-40 text-center text-2x1">
+        <div className="flex mt-32 mb-35 items-center justify-center text-2x1">
           <Link href="/">
-            <h1 className="text-4xl font-semibold">
-              Aditya<span className="text-accent">.</span>
-            </h1>
+            <Image src={logo} width={180} height={120} alt="logo" />
           </Link>
         </div>
         {/* nav */}
@@ -56,14 +57,15 @@ export const MobileNavBar = () => {
                   key={index}
                   className={`${
                     link.path === pathname &&
-                    'text-accent border-b-2 border-accent'
-                  } capitalize font-medium hover:text-accent transition-all`}
+                    'text-black dark:text-white border-b-2 border-black dark:border-white'
+                  } capitalize font-medium text-black dark:text-white hover:text-black transition-all`}
                 >
                   {link.name}
                 </Link>
               </SheetClose>
             )
           })}
+          <ThemeSwitch />
         </nav>
       </SheetContent>
     </Sheet>

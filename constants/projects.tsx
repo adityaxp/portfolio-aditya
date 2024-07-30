@@ -14,14 +14,13 @@ export const projectData = [
           developments in{' '}
           <Link
             href="https://en.wikipedia.org/wiki/Large_language_model"
-            className="underline hover:underline-offset-4 hover:text-accent"
+            className="underline hover:underline-offset-4 dark:hover:text-accent"
             rel="noopener noreferrer"
             target="_blank"
           >
             Large Language Models (LLMs)
           </Link>{' '}
-          space, I{"'"}ve conceived an idea for a platform that leverages LLM
-          technology to address legal inquiries.
+          space.
         </p>
         <p className="indent-20 text-justify xl:text-left">
           I{"'"}ve finetuned several well-known Large Language Models on Indian
@@ -29,7 +28,7 @@ export const projectData = [
           and other leagal text corpus using{' '}
           <Link
             href="https://huggingface.co/papers/2106.09685"
-            className="underline hover:underline-offset-4 hover:text-accent"
+            className="underline hover:underline-offset-4 dark:hover:text-accent"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -38,7 +37,7 @@ export const projectData = [
           technique. This finetuned models include Meta{"'"}s{' '}
           <Link
             href="https://huggingface.co/AdityaXPV/Llama-3-8b-Instruct-law-sage-v0.1/tree/main"
-            className="underline hover:underline-offset-4 hover:text-accent"
+            className="underline hover:underline-offset-4 dark:hover:text-accent"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -47,7 +46,7 @@ export const projectData = [
           and{' '}
           <Link
             href="https://huggingface.co/AdityaXPV/llama-2-7b-law-sage-v0.3/tree/main"
-            className="underline hover:underline-offset-4 hover:text-accent"
+            className="underline hover:underline-offset-4 dark:hover:text-accent"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -56,7 +55,7 @@ export const projectData = [
           , Mistral AI{"'"}s{' '}
           <Link
             href="https://huggingface.co/AdityaXPV/Mistral-7B-law-sage-v0.3/tree/main"
-            className="underline hover:underline-offset-4 hover:text-accent"
+            className="underline hover:underline-offset-4 dark:hover:text-accent"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -66,7 +65,7 @@ export const projectData = [
           quantized versions, are available on my{' '}
           <Link
             href="https://huggingface.co/AdityaXPV"
-            className="underline hover:underline-offset-4 hover:text-accent"
+            className="underline hover:underline-offset-4 dark:hover:text-accent"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -75,7 +74,7 @@ export const projectData = [
           . LawSage also includes{' '}
           <Link
             href="https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/"
-            className="underline hover:underline-offset-4 hover:text-accent"
+            className="underline hover:underline-offset-4 dark:hover:text-accent"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -84,7 +83,7 @@ export const projectData = [
           based chat interface. This chat interface uses a{' '}
           <Link
             href="https://huggingface.co/datasets/AdityaXPV/LawSage_RAG"
-            className="underline hover:underline-offset-4 hover:text-accent"
+            className="underline hover:underline-offset-4 dark:hover:text-accent"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -128,7 +127,7 @@ export const projectData = [
           can be controlled over Wi-Fi using a{' '}
           <Link
             href="https://github.com/adityaxp/RaspiCarV2/blob/master/Images/image5.png"
-            className="underline hover:underline-offset-4 hover:text-accent"
+            className="underline hover:underline-offset-4 dark:hover:text-accent"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -137,7 +136,7 @@ export const projectData = [
           via a socket connection and over the internet through a{' '}
           <Link
             href="https://firebasestorage.googleapis.com/v0/b/portfolio-assets-ba601.appspot.com/o/videos%2Fmobile.mp4?alt=media&token=80ddad6f-2630-4f99-9854-dc9f2adb3f28"
-            className="underline hover:underline-offset-4 hover:text-accent"
+            className="underline hover:underline-offset-4 dark:hover:text-accent"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -186,7 +185,7 @@ export const projectData = [
           them, with payments processed through{' '}
           <Link
             href="https://docs.stripe.com/webhooks"
-            className="underline hover:underline-offset-4 hover:text-accent"
+            className="underline hover:underline-offset-4 dark:hover:text-accent"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -232,7 +231,7 @@ export const projectData = [
           Additionally, Shoplens offers store owners an intuitive interface to{' '}
           <Link
             href="https://github.com/adityaxp/ShopLens/blob/master/Images/image10.png"
-            className="underline hover:underline-offset-4 hover:text-accent"
+            className="underline hover:underline-offset-4 dark:hover:text-accent"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -241,7 +240,7 @@ export const projectData = [
           ,{' '}
           <Link
             href="https://github.com/adityaxp/ShopLens/blob/master/Images/image12.png"
-            className="underline hover:underline-offset-4 hover:text-accent"
+            className="underline hover:underline-offset-4 dark:hover:text-accent"
             rel="noopener noreferrer"
             target="_blank"
           >

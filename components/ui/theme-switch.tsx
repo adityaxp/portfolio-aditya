@@ -26,7 +26,7 @@ export default function ThemeSwitch() {
 
   if (resolvedTheme === 'dark') {
     return (
-      <div className=" w-[50px] h-[50px] flex items-center justify-center rounded-full hover:bg-[#27272c]">
+      <div className="border w-[50px] h-[50px] flex items-center justify-center rounded-full hover:bg-[#27272c]">
         <FiSun
           className="w-[24px] h-[24px] text-white hover:text-offwhite"
           onClick={() => setTheme('light')}
@@ -37,7 +37,7 @@ export default function ThemeSwitch() {
 
   if (resolvedTheme === 'light') {
     return (
-      <div className="w-[50px] h-[50px] flex items-center justify-center rounded-full hover:bg-accent-hover">
+      <div className="border w-[50px] h-[50px] flex items-center justify-center rounded-full hover:bg-accent-hover">
         <FiMoon
           className="w-[24px] h-[24px] text-black hover:text-black/50"
           onClick={() => setTheme('dark')}
