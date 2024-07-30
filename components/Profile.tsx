@@ -26,12 +26,13 @@ const Profile = () => {
           className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute"
         >
           <Image
-            src="/assets/images/profile.png"
+            src="/assets/images/new-profile.jpg"
             priority
             quality={100}
-            fill
+            width={490}
+            height={490}
             alt=""
-            className="object-contain"
+            className="object-contain absolute rounded-full"
           />
         </motion.div>
 

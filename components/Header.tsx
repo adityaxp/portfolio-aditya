@@ -19,7 +19,7 @@ export const Header = () => {
         <div className="hidden xl:flex items-center gap-7">
           <NavBar />
           <Link href="/contact">
-            <Button className="bg-black dark:bg-white text-white dark:text-black hover:text-black">
+            <Button className="border hover:border-black bg-black dark:bg-white text-white dark:text-black hover:text-black">
               Hire me
             </Button>
           </Link>

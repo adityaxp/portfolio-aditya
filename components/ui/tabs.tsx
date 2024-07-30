@@ -3,14 +3,14 @@
 import * as React from 'react'
 import * as TabsPrimitive from '@radix-ui/react-tabs'
 
-import { cn } from '@/lib/utils'
+import {cn} from '@/lib/utils'
 
 const Tabs = TabsPrimitive.Root
 
 const TabsList = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.List>,
   React.ComponentPropsWithoutRef<typeof TabsPrimitive.List>
->(({ className, ...props }, ref) => (
+>(({className, ...props}, ref) => (
   <TabsPrimitive.List
     ref={ref}
     className={cn('inline-flex h-auto rounded-m p-1 text-primary', className)}
@@ -22,22 +22,23 @@ TabsList.displayName = TabsPrimitive.List.displayName
 const TabsTrigger = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof TabsPrimitive.Trigger>
->(({ className, ...props }, ref) => (
+>(({className, ...props}, ref) => (
   <TabsPrimitive.Trigger
     ref={ref}
     className={cn(
-      'inline-flex items-center w-full bg-[#27272c] justify-center whitespace-nowrap text-white rounded-xl p-3 text-base font-medium ring-offset-white transition-all disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-accent data-[state=active]:text-primary data-[state=active]:font-bold data-[state=active]:shadow-sm',
+      'inline-flex border border-black dark:border-accent-hover items-center w-full bg-transperent justify-center whitespace-nowrap dark:text-white rounded-xl p-3 text-base font-medium ring-offset-white transition-all disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-black dark:data-[state=active]:bg-accent data-[state=active]:text-white  dark:data-[state=active]:text-primary data-[state=active]:font-bold data-[state=active]:shadow-sm',
       className
     )}
     {...props}
   />
 ))
+
 TabsTrigger.displayName = TabsPrimitive.Trigger.displayName
 
 const TabsContent = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof TabsPrimitive.Content>
->(({ className, ...props }, ref) => (
+>(({className, ...props}, ref) => (
   <TabsPrimitive.Content
     ref={ref}
     className={cn(
@@ -49,4 +50,4 @@ const TabsContent = React.forwardRef<
 ))
 TabsContent.displayName = TabsPrimitive.Content.displayName
 
-export { Tabs, TabsList, TabsTrigger, TabsContent }
+export {Tabs, TabsList, TabsTrigger, TabsContent}
