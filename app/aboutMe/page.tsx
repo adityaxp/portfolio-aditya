@@ -129,7 +129,7 @@ const educationData = {
 const skillsData: any = {
   title: 'My skills',
   description:
-    "I'm proficient in mobile development and also work on web development on the side. Additionally, I enjoy tinkering with embedded systems and IoT devices.",
+    "I'm proficient in mobile development, alongside a background in web development. Additionally, I enjoy tinkering with embedded systems and IoT devices.",
   skillList: {
     languages: [
       {
