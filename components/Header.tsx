@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import Link from 'next/link'
 import {NavBar} from './NavBar'
@@ -6,6 +8,7 @@ import {MobileNavBar} from './MobileNavBar'
 import ThemeSwitch from './ui/theme-switch'
 import Image from 'next/image'
 import logo from '@/public/assets/images/logo.png'
+import logoDark from '@/public/assets/images/logo-dark.png'
 
 export const Header = () => {
   return (
@@ -13,7 +16,22 @@ export const Header = () => {
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <Link href="/">
-          <Image src={logo} width={180} height={120} alt="logo" />
+          <div>
+            <Image
+              className="hidden dark:block"
+              src={logoDark}
+              width={180}
+              height={120}
+              alt="logo"
+            />
+            <Image
+              className="block dark:hidden"
+              src={logo}
+              width={180}
+              height={120}
+              alt="logo"
+            />
+          </div>
         </Link>
         {/* desktop nav */}
         <div className="hidden xl:flex items-center gap-7">

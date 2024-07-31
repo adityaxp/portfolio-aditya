@@ -2,11 +2,20 @@
   display: inline-block;
 }
 
-.hover-svg .svg-path {
-  fill: #fff; /* Default color */
-  transition: fill 0.3s; /* Smooth transition */
+.svg-container svg .svg-path {
+  fill: black;
+  transition: fill 0.3s;
 }
 
-.hover-svg:hover .svg-path {
-  fill: #00e187; /* Change to your desired color on hover */
+.svg-container svg:hover .svg-path {
+  fill: #525252;
+}
+
+/* Tailwind dark mode */
+.dark .svg-container svg .svg-path {
+  fill: white;
+}
+
+.dark .svg-container svg:hover .svg-path {
+  fill: #525252;
 }
