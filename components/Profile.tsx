@@ -1,12 +1,21 @@
 'use client'
-import React from 'react'
-
+import React, {useEffect, useState} from 'react'
 import {motion} from 'framer-motion'
 import Image from 'next/image'
 import {useTheme} from 'next-themes'
 
 const Profile = () => {
-  const {resolvedTheme} = useTheme()
+  const {theme, resolvedTheme} = useTheme()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) return null
+
+  const currentTheme = theme === 'system' ? resolvedTheme : theme
+
   return (
     <div className="w-full h-full relative">
       <motion.div
@@ -26,13 +35,12 @@ const Profile = () => {
           className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute"
         >
           <Image
-            src="/assets/images/new-profile.jpg"
+            src="/assets/images/profile.png"
             priority
             quality={100}
-            width={490}
-            height={490}
+            fill
             alt=""
-            className="object-contain absolute rounded-full"
+            className="object-contain"
           />
         </motion.div>
 
@@ -47,7 +55,7 @@ const Profile = () => {
             cx="253"
             cy="253"
             r="250"
-            stroke={resolvedTheme === 'light' ? '#000' : '#ededed'}
+            stroke={currentTheme === 'light' ? '#000' : '#ededed'}
             strokeWidth="6"
             strokeLinecap="round"
             strokeLinejoin="round"

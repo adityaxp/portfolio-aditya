@@ -13,6 +13,9 @@ import {CiMenuFries} from 'react-icons/ci'
 import ThemeSwitch from './ui/theme-switch'
 import Image from 'next/image'
 import logo from '@/public/assets/images/logo.png'
+import logoDark from '@/public/assets/images/logo-dark.png'
+
+import {useTheme} from 'next-themes'
 
 const links = [
   {
@@ -34,6 +37,8 @@ const links = [
 ]
 
 export const MobileNavBar = () => {
+  const {theme} = useTheme()
+
   const pathname = usePathname()
   return (
     <Sheet>
@@ -44,7 +49,12 @@ export const MobileNavBar = () => {
         {/* logo */}
         <div className="flex mt-32 mb-35 items-center justify-center text-2x1">
           <Link href="/">
-            <Image src={logo} width={180} height={120} alt="logo" />
+            <Image
+              src={theme === 'light' ? logo : logoDark}
+              width={180}
+              height={120}
+              alt="logo"
+            />
           </Link>
         </div>
         {/* nav */}
