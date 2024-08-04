@@ -17,8 +17,9 @@ export const metadata: Metadata = {
     'Aditya Balsane',
     'Aditya',
     'Balsane',
-    'Software',
-    'portfolio',
+    'Software Developer',
+    'Mobile Developer',
+    'Portfolio',
     'LawSage'
   ],
   title: {
