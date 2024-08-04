@@ -38,7 +38,10 @@ const config = {
           DEFAULT: '#fff',
           hover: '#ededed'
         },
-
+        borderWidth: {
+          '0.5': '0.5px',
+          '0.25': '0.25px'
+        },
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',

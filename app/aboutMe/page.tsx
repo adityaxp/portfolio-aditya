@@ -277,7 +277,7 @@ const AboutMe = () => {
                   <p className="max-w-[600px] text-black dark:text-white/60 mx-auto xl:mx-0">
                     {experienceData.description}
                   </p>
-                  <ScrollArea className="h-[500px]">
+                  <ScrollArea className="h-[500px] xl:h-[535px]">
                     <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                       {experienceData.items.map((item, index) => {
                         return (
