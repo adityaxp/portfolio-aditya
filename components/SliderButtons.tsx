@@ -20,8 +20,6 @@ const SliderButtons: React.FC<SliderButtonsProps> = ({
   setIndex,
   setproject
 }) => {
-  console.log(index)
-
   const handlePrevious = () => {
     const newIndex = index > 0 ? index - 1 : projectData.length - 1
     setIndex(newIndex)

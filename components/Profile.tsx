@@ -17,7 +17,7 @@ const Profile = () => {
   const currentTheme = theme === 'system' ? resolvedTheme : theme
 
   return (
-    <div className="w-full h-full relative">
+    <div className="w-full h-full relative select-none">
       <motion.div
         initial={{opacity: 0}}
         animate={{
@@ -32,15 +32,23 @@ const Profile = () => {
             opacity: 1,
             transition: {delay: 1.4, duration: 0.4, ease: 'easeInOut'}
           }}
-          className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute"
+          className="w-[290px] h-[290px] xl:w-[490px] xl:h-[490px] mix-blend-lighten absolute top-[5px] left-[5px] xl:top-[8px] xl:left-2"
         >
           <Image
-            src="/assets/images/profile.png"
+            src="/assets/images/photo-alt-new.png"
             priority
             quality={100}
             fill
             alt=""
-            className="object-contain"
+            className="object-contain rounded-full hidden dark:block"
+          />
+          <Image
+            src="/assets/images/photo-new.png"
+            priority
+            quality={100}
+            fill
+            alt=""
+            className="object-contain rounded-full block dark:hidden"
           />
         </motion.div>
 

@@ -13,7 +13,7 @@ import {CiMenuFries} from 'react-icons/ci'
 import ThemeSwitch from './ui/theme-switch'
 import Image from 'next/image'
 import logo from '@/public/assets/images/logo.png'
-import logoDark from '@/public/assets/images/logo-dark.png'
+import logoDark from '@/public/assets/images/logo-alt.png'
 
 import {useTheme} from 'next-themes'
 

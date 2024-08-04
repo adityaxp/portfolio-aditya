@@ -1,21 +1,35 @@
 'use client'
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import {Button} from './ui/button'
 import {FiDownload} from 'react-icons/fi'
 import SocialsItem from './SocialsItem'
 import Profile from './Profile'
 import {Highlight} from '@/components/ui/hero-highlight'
 import {motion} from 'framer-motion'
+import Confetti from 'react-confetti'
 
 const HeroSection = () => {
+  const [onDownload, setOnDownload] = useState(false)
+
+  useEffect(() => {
+    if (onDownload === true) {
+      const timer = setTimeout(() => {
+        setOnDownload(false)
+      }, 5000)
+      return () => clearTimeout(timer)
+    }
+  }, [onDownload])
+
   return (
-    <section className="h-full">
+    <section className="h-full mb-20">
+      {onDownload && <Confetti />}
+
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           {/* text */}
           <div className="text-center xl:text-left order-2 xl:order-none">
             <button className="mb-5 px-4 py-2  backdrop-blur-sm border hover:bg-accent-hover  border-black dark:border-white mx-auto text-center rounded-full relative mt-4">
-              <span className="text-l dark:hover:text-black text-black dark:text-white ">
+              <span className="text-l dark:hover:text-black text-black dark:text-white select-none">
                 Software Developer
               </span>
             </button>
@@ -32,10 +46,10 @@ const HeroSection = () => {
                 duration: 0.5,
                 ease: [0.4, 0.0, 0.2, 1]
               }}
-              className="h2 mb-6 text-white text-stroke-3 dark:text-white/80"
+              className="h2 mb-6 text-white text-stroke-3 dark:text-white/80 select-none"
             >
               Hello I{"'"}m <br />
-              <span className="h1 text-black dark:text-white hover:text-accent-hover">
+              <span className="xl:h1 text-black dark:text-white hover:text-accent-hover transition-all duration-500">
                 Aditya Balsane
               </span>
             </motion.h1>
@@ -52,7 +66,7 @@ const HeroSection = () => {
                 duration: 0.5,
                 ease: [0.4, 0.0, 0.2, 1]
               }}
-              className="max-w-[510px] mb-9 dark:text-white/80"
+              className="max-w-[510px] mb-9 dark:text-white/80 select-none"
             >
               With a passion for development,
               <Highlight className="text-white dark:text-black px-2">
@@ -66,8 +80,11 @@ const HeroSection = () => {
                 variant="outline"
                 size="lg"
                 className="uppercase flex items-center gap-2 text-white hover:bg-transparent hover:text-primary"
+                onClick={() => {
+                  setOnDownload(true)
+                }}
               >
-                <span>Download CV</span>
+                <span className="select-none">Download CV</span>
                 <FiDownload className="text-xl" />
               </Button>
               <SocialsItem
