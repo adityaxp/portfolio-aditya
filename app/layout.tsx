@@ -4,6 +4,7 @@ import './globals.css'
 import {Header} from '@/components/Header'
 import {AppThemeProvider} from './theme-provider'
 import {Toaster} from '@/components/ui/toaster'
+import {Analytics} from '@vercel/analytics/react'
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
@@ -46,6 +47,7 @@ export default function RootLayout({
           <Toaster />
         </AppThemeProvider>
       </body>
+      <Analytics />
     </html>
   )
 }
