@@ -31,6 +31,9 @@ export const metadata: Metadata = {
     description:
       "Hello there, I'm a software developer with a passion for innovation, dedicated to crafting seamless solutions, and always focused on delivering high-quality user-centric applications."
   }
+  // verification: {
+  //   google: 'LiHZLGEqUoTdn9zDz4xgFi4FjS2lde6--9lZkWaRa84'
+  // }
 }
 
 export default function RootLayout({

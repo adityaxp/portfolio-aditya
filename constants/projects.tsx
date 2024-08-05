@@ -10,8 +10,10 @@ export const projectData = [
         <p className="indent-20 text-justify xl:text-left">
           The Indian legal system has always been based on a large amount of
           complex legal documents, laws, and case rulings, making it hard for
-          individuals to understand and navigate. Inspired by the latest
-          developments in{' '}
+          individuals to understand and navigate.
+        </p>
+        <p className="indent-20 text-justify xl:text-left">
+          Inspired by the latest developments in{' '}
           <Link
             href="https://en.wikipedia.org/wiki/Large_language_model"
             className="underline hover:underline-offset-4 dark:hover:text-accent"
@@ -20,12 +22,9 @@ export const projectData = [
           >
             Large Language Models (LLMs)
           </Link>{' '}
-          space.
-        </p>
-        <p className="indent-20 text-justify xl:text-left">
-          I{"'"}ve finetuned several well-known Large Language Models on Indian
-          laws and regulations, relevant articles, legal advice forum threads,
-          and other legal text corpus using{' '}
+          space. I{"'"}ve finetuned several well-known Large Language Models on
+          Indian laws and regulations, relevant articles, legal advice forum
+          threads, and other legal text corpus using{' '}
           <Link
             href="https://huggingface.co/papers/2106.09685"
             className="underline hover:underline-offset-4 dark:hover:text-accent"
