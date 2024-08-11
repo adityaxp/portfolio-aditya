@@ -55,7 +55,7 @@ const HeroSection = () => {
               }}
               className="max-w-[510px] mb-9 dark:text-white/80 select-none"
             >
-              With a passion for development,
+              With a passion for software development,
               <Highlight className="text-white dark:text-black px-2">
                 I excel at crafting elegant digital experiences and am adept in
                 handling a wide range of technologies and workflows.
