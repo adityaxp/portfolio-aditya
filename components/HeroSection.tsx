@@ -6,25 +6,11 @@ import SocialsItem from './SocialsItem'
 import Profile from './Profile'
 import {Highlight} from '@/components/ui/hero-highlight'
 import {motion} from 'framer-motion'
-import Confetti from 'react-confetti'
-import Link from 'next/link'
+import {confettiSideCannons} from './ui/ConfettiSideCannons'
 
 const HeroSection = () => {
-  const [onDownload, setOnDownload] = useState(false)
-
-  useEffect(() => {
-    if (onDownload === true) {
-      const timer = setTimeout(() => {
-        setOnDownload(false)
-      }, 5000)
-      return () => clearTimeout(timer)
-    }
-  }, [onDownload])
-
   return (
     <section className="h-full mb-20">
-      {onDownload && <Confetti />}
-
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-5 xl:pb-24">
           {/* text */}
@@ -82,7 +68,7 @@ const HeroSection = () => {
                 size="lg"
                 className="uppercase flex items-center gap-2 text-white hover:bg-transparent hover:text-primary"
                 onClick={() => {
-                  setOnDownload(true)
+                  confettiSideCannons()
                   setTimeout(() => {
                     window.open(
                       'https://firebasestorage.googleapis.com/v0/b/portfolio-assets-ba601.appspot.com/o/CV%2FCV-Aditya_Balsane_9403299428.pdf?alt=media&token=1edc45c1-9551-4994-8e6a-78d39c37a728',
