@@ -7,6 +7,7 @@ import Profile from './Profile'
 import {Highlight} from '@/components/ui/hero-highlight'
 import {motion} from 'framer-motion'
 import {confettiSideCannons} from './ui/ConfettiSideCannons'
+import {AnimatedShinyHeader} from './ui/AnimatedShinyHeader'
 
 const HeroSection = () => {
   return (
@@ -15,11 +16,7 @@ const HeroSection = () => {
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-5 xl:pb-24">
           {/* text */}
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <button className="mb-5 px-4 py-2  backdrop-blur-sm border hover:bg-accent-hover  border-black dark:border-offwhite mx-auto text-center rounded-full relative mt-4">
-              <span className="text-l  dark:hover:text-black text-black dark:text-white select-none">
-                Software Developer
-              </span>
-            </button>
+            <AnimatedShinyHeader />
             <motion.h1
               initial={{
                 opacity: 0,
@@ -74,7 +71,7 @@ const HeroSection = () => {
                       'https://firebasestorage.googleapis.com/v0/b/portfolio-assets-ba601.appspot.com/o/CV%2FCV-Aditya_Balsane_9403299428.pdf?alt=media&token=1edc45c1-9551-4994-8e6a-78d39c37a728',
                       '_blank'
                     )
-                  }, 4000)
+                  }, 1500)
                 }}
               >
                 <span className="select-none">Download CV</span>

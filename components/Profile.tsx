@@ -35,7 +35,7 @@ const Profile = () => {
           className="w-[290px] h-[290px] xl:w-[490px] xl:h-[490px] mix-blend-lighten absolute top-[5px] left-[5px] xl:top-[8px] xl:left-2"
         >
           <Image
-            src="/assets/images/photo-alt-new.png"
+            src="/assets/images/photo-alt.png"
             priority
             quality={100}
             fill
@@ -43,7 +43,7 @@ const Profile = () => {
             className="object-contain rounded-full hidden dark:block"
           />
           <Image
-            src="/assets/images/photo-new.png"
+            src="/assets/images/photo.png"
             priority
             quality={100}
             fill
