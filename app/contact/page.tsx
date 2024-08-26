@@ -55,8 +55,12 @@ const Contact = () => {
         description: 'Thank you for reaching out. I will get back to you soon.',
         action: <ToastAction altText="Goto schedule to undo">Undo</ToastAction>
       })
+
+      // Clear the form fields
+      event.target.reset()
     }
   }
+
   return (
     <motion.section
       initial={{opacity: 0}}
