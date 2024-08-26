@@ -219,6 +219,57 @@ export const projectData = [
   {
     id: 4,
     category: 'Mobile Developement',
+    title: 'Ava',
+    description: (
+      <div>
+        <p className="indent-20 text-justify xl:text-left">
+          Ava is an LLM-powered chatbot built on the llama.cpp architecture. The
+          app enables you to run LLM models locally, leveraging the{' '}
+          <Link
+            href="https://github.com/mybigday/llama.rn"
+            className="underline hover:underline-offset-4 dark:hover:text-accent"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            llama.rn
+          </Link>
+          . It supports small fine-tuned models (TinyLlama, Phi, etc.){' '}
+          <Link
+            href="https://huggingface.co/docs/hub/en/gguf"
+            className="underline hover:underline-offset-4 dark:hover:text-accent"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            GGUF/GGML
+          </Link>{' '}
+          models. Models can be selected based on your needs and performance
+          constraints. All chats are stored locally and remain private. More
+          features coming soon...
+        </p>
+      </div>
+    ),
+    stack: [
+      {name: 'TypeScript'},
+      {name: 'React native'},
+      {name: 'Expo Router'},
+      {name: 'llama.rn'}
+    ],
+    content: [],
+    images: [
+      'https://firebasestorage.googleapis.com/v0/b/portfolio-assets-ba601.appspot.com/o/pictures%2FAva%2F1.jpeg?alt=media&token=66dae8cb-66d5-4247-877b-a3bc7d9f3088',
+      'https://firebasestorage.googleapis.com/v0/b/portfolio-assets-ba601.appspot.com/o/pictures%2FAva%2F2.jpeg?alt=media&token=8d9d91d4-bf9f-480d-bc68-011f2e74c6b2',
+      'https://firebasestorage.googleapis.com/v0/b/portfolio-assets-ba601.appspot.com/o/pictures%2FAva%2F3.jpeg?alt=media&token=4cd72c95-d213-46d8-8423-7224e214e479',
+      'https://firebasestorage.googleapis.com/v0/b/portfolio-assets-ba601.appspot.com/o/pictures%2FAva%2F4.jpeg?alt=media&token=c081ba06-4264-45d9-9133-7e36796fd813',
+      'https://firebasestorage.googleapis.com/v0/b/portfolio-assets-ba601.appspot.com/o/pictures%2FAva%2F5.jpeg?alt=media&token=8848e271-4cb6-41ac-8f04-3dddf962b60c',
+      'https://firebasestorage.googleapis.com/v0/b/portfolio-assets-ba601.appspot.com/o/pictures%2FAva%2F6.jpeg?alt=media&token=79ea6b79-873c-42c9-9310-db5b2f00916f'
+    ],
+    github: 'https://github.com/adityaxp/Ava.git',
+    video:
+      'https://firebasestorage.googleapis.com/v0/b/portfolio-assets-ba601.appspot.com/o/videos%2FAva.mp4?alt=media&token=fd84c506-c99c-47d2-aad1-0878e8f6c555'
+  },
+  {
+    id: 5,
+    category: 'Mobile Developement',
     title: 'ShopLens',
     description: (
       <div>
@@ -270,7 +321,7 @@ export const projectData = [
     video: ''
   },
   {
-    id: 5,
+    id: 6,
     category: 'Mobile Developement',
     title: 'Student Teacher App',
     description: (
