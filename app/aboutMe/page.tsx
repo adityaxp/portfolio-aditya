@@ -1,6 +1,7 @@
 'use client'
 
-import React, {useState} from 'react'
+import {motion, useInView, useAnimation} from 'framer-motion'
+import React, {useState, useRef, useEffect} from 'react'
 
 import {
   FaHtml5,
@@ -50,7 +51,6 @@ import {
 } from '@/components/ui/select'
 
 import {ScrollArea} from '@/components/ui/scroll-area'
-import {motion} from 'framer-motion'
 
 import ExpoSvg from '../../public/assets/icons/exposvg'
 
@@ -245,15 +245,24 @@ const AboutMe = () => {
   }
 
   const [skillType, setSkillType] = useState<string>('languages')
+  const ref = useRef(null)
+  const isInView = useInView(ref, {once: true})
+  const animControls = useAnimation()
+
+  useEffect(() => {
+    if (isInView) {
+      animControls.start('visible')
+    }
+  }, [isInView])
 
   return (
     <section className="h-full mb-5">
       <motion.div
-        initial={{opacity: 0}}
-        animate={{
-          opacity: 1,
-          transition: {delay: 0.5, duration: 0.4, ease: 'easeIn'}
-        }}
+        ref={ref}
+        variants={{hidden: {opacity: 0, x: -75}, visible: {opacity: 1, x: 0}}}
+        initial="hidden"
+        animate={animControls}
+        transition={{delay: 0.5, duration: 0.4, ease: 'easeOut'}}
         className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
       >
         <div className="container mx-auto">
@@ -271,7 +280,7 @@ const AboutMe = () => {
             <div className="min-h-[70vh] w-full">
               <TabsContent value="experience" className="w-full">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                  <h3 className="text-4xl font-bold hover:text-accent-hover text-stroke-1 dark:text-white dark:hover:text-offblack">
+                  <h3 className="text-4xl font-bold hover:text-accent-hover text-stroke-1 dark:text-white dark:hover:text-accent">
                     {experienceData.title}
                   </h3>
                   <p className="max-w-[600px] text-black dark:text-white/60 mx-auto xl:mx-0">
@@ -312,7 +321,7 @@ const AboutMe = () => {
               </TabsContent>
               <TabsContent value="education" className="w-full">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                  <h3 className="text-4xl font-bold hover:text-accent-hover text-stroke-1 dark:text-white dark:hover:text-offblack">
+                  <h3 className="text-4xl font-bold hover:text-accent-hover text-stroke-1 dark:text-white dark:hover:text-accent">
                     {educationData.title}
                   </h3>
                   {/* <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
@@ -354,7 +363,7 @@ const AboutMe = () => {
               <TabsContent value="skills" className="w-full">
                 <div className="flex flex-col gap-[30px]">
                   <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                    <h3 className="text-4xl font-bold hover:text-accent-hover text-stroke-1 dark:text-white dark:hover:text-offblack">
+                    <h3 className="text-4xl font-bold hover:text-accent-hover text-stroke-1 dark:text-white dark:hover:text-accent">
                       {skillsData.title}
                     </h3>
                     <p className="max-w-[600px] text-black dark:text-white/60 mx-auto xl:mx-0">
