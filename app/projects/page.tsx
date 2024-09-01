@@ -1,8 +1,7 @@
 'use client'
-import {motion} from 'framer-motion'
-import React, {useState} from 'react'
+import {motion, useInView, useAnimation} from 'framer-motion'
+import React, {useState, useRef, useEffect} from 'react'
 
-import {Swiper, SwiperSlide} from 'swiper/react'
 import 'swiper/css'
 
 import {BsGithub} from 'react-icons/bs'
@@ -23,14 +22,23 @@ import {projectData} from '@/constants/projects'
 const Project = () => {
   const [index, setIndex] = useState(0)
   const [project, setproject] = useState(projectData[index])
+  const ref = useRef(null)
+  const isInView = useInView(ref, {once: true})
+  const animControls = useAnimation()
+
+  useEffect(() => {
+    if (isInView) {
+      animControls.start('visible')
+    }
+  }, [isInView])
 
   return (
     <motion.section
-      initial={{opacity: 0}}
-      animate={{
-        opacity: 1,
-        transition: {delay: 0.5, duration: 0.4, ease: 'easeIn'}
-      }}
+      ref={ref}
+      variants={{hidden: {opacity: 0, x: 75}, visible: {opacity: 1, x: 0}}}
+      initial="hidden"
+      animate={animControls}
+      transition={{delay: 0.5, duration: 0.4, ease: 'easeIn'}}
       className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
     >
       <div className="container mx-auto">
@@ -38,7 +46,7 @@ const Project = () => {
         <div className="flex flex-col xl:flex-row xl:gap-[30px]">
           <div className="w-full xl:w-[60%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
             <div className="flex flex-col gap-4 h-[50%]">
-              <h2 className="text-[32px] mt-5 font-bold text-primary hover:text-accent-hover text-stroke-1 dark:text-white dark:hover:text-offblack leading-none transition-all duration-500 capitalize">
+              <h2 className="text-[32px] mt-5 font-bold text-primary hover:text-accent-hover text-stroke-1 dark:text-white dark:hover:text-accent leading-none transition-all duration-500 capitalize">
                 {project.id}. {project.title}
               </h2>
               <div className="dark:text-white/60">{project.description}</div>

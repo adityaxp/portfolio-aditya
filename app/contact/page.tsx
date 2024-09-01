@@ -1,9 +1,8 @@
 'use client'
 
-import React from 'react'
-
 import {FaPhoneAlt, FaEnvelope, FaUser} from 'react-icons/fa'
-import {motion} from 'framer-motion'
+import {motion, useInView, useAnimation} from 'framer-motion'
+import React, {useRef, useEffect} from 'react'
 import {Input} from '@/components/ui/input'
 import {Textarea} from '@/components/ui/textarea'
 import {Button} from '@/components/ui/button'
@@ -14,7 +13,7 @@ const info = [
   {
     icon: <FaUser />,
     title: 'Name',
-    description: 'Aditya (Ah-dith-yuh) Balsane'
+    description: 'Aditya Balsane'
   },
   {
     icon: <FaPhoneAlt />,
@@ -30,6 +29,15 @@ const info = [
 
 const Contact = () => {
   const {toast} = useToast()
+  const ref = useRef(null)
+  const isInView = useInView(ref, {once: true})
+  const animControls = useAnimation()
+
+  useEffect(() => {
+    if (isInView) {
+      animControls.start('visible')
+    }
+  }, [isInView])
 
   const onSubmit = async (event: any) => {
     event.preventDefault()
@@ -63,11 +71,11 @@ const Contact = () => {
 
   return (
     <motion.section
-      initial={{opacity: 0}}
-      animate={{
-        opacity: 1,
-        transition: {delay: 0.1, duration: 0.1, ease: 'easeIn'}
-      }}
+      ref={ref}
+      variants={{hidden: {opacity: 0, x: 0}, visible: {opacity: 1, x: 0}}}
+      initial="hidden"
+      animate={animControls}
+      transition={{delay: 0.5, duration: 0.4, ease: 'easeIn'}}
       className="py-2 mb-20"
     >
       <div className="container mx-auto">
@@ -115,18 +123,14 @@ const Contact = () => {
             </form>
           </div>
           <motion.div
-            initial={{
-              opacity: 0,
-              y: 20
+            ref={ref}
+            variants={{
+              hidden: {opacity: 0, y: 75},
+              visible: {opacity: 1, y: 0}
             }}
-            animate={{
-              opacity: 1,
-              y: [20, -5, 0]
-            }}
-            transition={{
-              duration: 0.8,
-              ease: [0.4, 0.0, 0.2, 1]
-            }}
+            initial="hidden"
+            animate={animControls}
+            transition={{delay: 0.5, duration: 0.4, ease: 'easeIn'}}
             className="flex-1 flex xl:items-baseline items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0"
           >
             <ul className="flex flex-col gap-10">
