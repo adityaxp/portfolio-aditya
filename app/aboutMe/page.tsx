@@ -84,6 +84,12 @@ const experienceData = {
   description:
     'I have contributed to the development of end-to-end applications with multiple teams, working across various technologies. Additionally, I have contributed as a research assistant on a research project at my institute.',
   items: [
+     {
+      company: 'One800',
+      position: 'Mobile Developer',
+      duration: 'Sept 2024 - Present',
+      location: 'Bengaluru, Karnataka, India · On-site'
+    },
     {
       company: 'Stealth Startup',
       position: 'React Native Developer (Freelance Work)',
