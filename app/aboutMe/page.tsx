@@ -86,7 +86,7 @@ const experienceData = {
   items: [
      {
       company: 'One800',
-      position: 'Mobile Developer',
+      position: 'Mobile Application Developer',
       duration: 'Sept 2024 - Present',
       location: 'Bengaluru, Karnataka, India · On-site'
     },
