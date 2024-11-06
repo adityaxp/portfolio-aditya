@@ -68,7 +68,7 @@ const HeroSection = () => {
                   confettiSideCannons()
                   setTimeout(() => {
                     window.open(
-                      'https://firebasestorage.googleapis.com/v0/b/portfolio-assets-ba601.appspot.com/o/CV%2F9403299428_Aditya%20Balsane.pdf?alt=media&token=d89e25a5-615a-43ce-b7a5-288a0ad8e164',
+                      'https://firebasestorage.googleapis.com/v0/b/portfolio-assets-ba601.appspot.com/o/CV%2FCV-9403299428-Aditya_Balsane-2.pdf?alt=media&token=2a87a20f-f89e-4c63-ab85-14b73effe20b',
                       '_blank'
                     )
                   }, 1500)
