@@ -93,7 +93,7 @@ const experienceData = {
     {
       company: 'Stealth Startup',
       position: 'React Native Developer (Freelance Work)',
-      duration: 'Nov 2023 - Apr 2024',
+      duration: 'Nov 2023 - Jun 2024',
       location: 'Missouri, United States · Remote'
     },
     {
